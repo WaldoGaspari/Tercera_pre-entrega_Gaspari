@@ -63,3 +63,25 @@ def agregarProducto(request):
         formulario = FormularioProducto()
     
     return render(request, "aplicacion/agregarProducto.html", {"form": formulario })
+
+def busquedaServicio(request):
+    return render(request, "aplicacion/buscarServicio.html")
+
+def buscarServicio(request):
+    if request.GET['buscar']:
+        patron = request.GET['buscar']
+        servicios = Servicio.objects.filter(nombre__icontains=patron)
+        contexto = {"servicios": servicios, 'titulo': f'Patrón de búsqueda:"{patron}"'}
+        return render(request, "aplicacion/servicios.html", contexto)
+    return HttpResponse("No se ingresó nada para buscar.")
+
+def busquedaVehiculo(request):
+    return render(request, "aplicacion/buscarVehiculo.html")
+
+def buscarVehiculo(request):
+    if request.GET['buscar']:
+        patron = request.GET['buscar']
+        vehiculos = Vehiculo.objects.filter(nombre__icontains=patron)
+        contexto = {"vehiculos": vehiculos, 'titulo': f'Patrón de búsqueda:"{patron}"'}
+        return render(request, "aplicacion/vehiculos.html", contexto)
+    return HttpResponse("No se ingresó nada para buscar.")

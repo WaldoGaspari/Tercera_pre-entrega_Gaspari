@@ -9,4 +9,8 @@ urlpatterns = [
     path('agregarServicio/', agregarServicio, name="agregarServicio" ),
     path('agregarVehiculo/', agregarVehiculo, name="agregarVehiculo" ),
     path('agregarProducto/', agregarProducto, name="agregarProducto" ),
+    path('busquedaServicio/', busquedaServicio, name="busquedaServicio" ),
+    path('buscarServicio/', buscarServicio, name="buscarServicio" ),
+    path('busquedaVehiculo/', busquedaVehiculo, name="busquedaServicio" ),
+    path('buscarVehiculo/', buscarVehiculo, name="buscarVehiculo" ),
 ]
