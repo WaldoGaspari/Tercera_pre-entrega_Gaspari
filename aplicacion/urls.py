@@ -13,4 +13,6 @@ urlpatterns = [
     path('buscarServicio/', buscarServicio, name="buscarServicio" ),
     path('busquedaVehiculo/', busquedaVehiculo, name="busquedaServicio" ),
     path('buscarVehiculo/', buscarVehiculo, name="buscarVehiculo" ),
+    path('busquedaProducto/', busquedaProducto, name="busquedaProducto" ),
+    path('buscarProducto/', buscarProducto, name="buscarProducto" ),
 ]

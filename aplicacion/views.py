@@ -85,3 +85,14 @@ def buscarVehiculo(request):
         contexto = {"vehiculos": vehiculos, 'titulo': f'Patrón de búsqueda:"{patron}"'}
         return render(request, "aplicacion/vehiculos.html", contexto)
     return HttpResponse("No se ingresó nada para buscar.")
+
+def busquedaProducto(request):
+    return render(request, "aplicacion/buscarProducto.html")
+
+def buscarProducto(request):
+    if request.GET['buscar']:
+        patron = request.GET['buscar']
+        productos = Producto.objects.filter(nombre__icontains=patron)
+        contexto = {"productos": productos, 'titulo': f'Patrón de búsqueda:"{patron}"'}
+        return render(request, "aplicacion/productos.html", contexto)
+    return HttpResponse("No se ingresó nada para buscar.")
