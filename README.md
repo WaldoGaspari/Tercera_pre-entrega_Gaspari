@@ -11,3 +11,5 @@ Para ello, tenemos 3 modelos: Servicios, Vehículos y Productos.
 En cada uno de ellos, se podrá ver el listado de todos los elementos que hasta el momento se encuentran cargados y se podrá tanto agregar un nuevo elemento como buscar el que desee a traves de un patrón específico.
 
 Se presenta una vista de Inicio con información acerca del tema y luego una vista para Servicios, otra para Vehículos y otra para Productos.
+
+En la base de datos se encuentran cargados algunos registros para cada uno de los modelos.
